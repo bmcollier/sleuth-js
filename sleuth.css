@@ -1,0 +1,38 @@
+body {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 14px;
+	color: white;
+	background: #222;
+}
+
+#game {
+	width: 1120px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	overflow: auto;
+	border: 1px solid #888;
+}
+
+#dialogue {
+	background: black;
+	width: 1100px;
+	height: 80px;
+	float: left;
+	padding: 10px;
+	border-top: 1px solid #888;
+}
+
+#commands {
+	height: 16px;
+	width: 1100px;
+	background: black;
+	float: left;
+	padding: 10px;
+	border-top: 1px solid #888;
+}
+
+#cr-stage {
+	width: 1120px;
+	float: left;
+}
