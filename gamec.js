@@ -41,10 +41,12 @@ function refreshinput() {
 
 
 // Set up Character Names
+// Character arrays are as follows:
+// Firstname, Lastname, Room Number, Index of Character with Alibi, Room index of alibi,
 
 var character = []
 
-character[0] = ['James', 'Smythe', 0, -1, -1, -1, -1,-1];
+character[0] = ['James', 'Smythe', 0, -1, -1, -1, -1, -1];
 character[1] = ['Linda', 'Smythe', 0, -1, -1, -1, -1, -1];
 character[2] = ['Trevor', 'Watson', 0, -1, -1, -1, -1, -1];
 character[3] = ['Janet', 'Watson', 0, -1, -1, -1, -1, -1];

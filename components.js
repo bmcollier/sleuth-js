@@ -254,11 +254,11 @@ function doroomactivities(roomnumber) {
 	if (magnifyingglassroom == currentroom && hasmagnifyingglass == false) { weaponpresence = "<br/> A magnifying glass lies here."; }
 	if (currentroom != roomnumber) {
 		roomentrances = roomentrances + 1;
-		if (roomentrances > 15) { warning = ('<div style="color: orange;">The murderer has grown suspicious of your investigation!</div>'); }
-		if (roomentrances > 30) {
+		if (roomentrances > 10) { warning = ('<div style="color: orange;">The murderer has grown suspicious of your investigation!</div>'); }
+		if (roomentrances > 22) {
 			warning = ('<div style="color: red;">The murderer is now stalking you!</div>');
-			var death = RandomInteger (1,20);
-			if ( death == 20 ) {
+			var death = RandomInteger (1,10);
+			if ( death == 1 ) {
 				lockdoors();
 				Crafty.audio.play("strings");
 				deadmessage = ('<div style="color: red;">' + character[murderer][0] + ' ' + character[murderer][1] + ' slams the door behind you as you enter. "You were getting just a little too close to the truth, detective. Now it`s time for you to suffer the same fate as poor ' + character[victim][0] + '."</div><br/><br/>You are dead. Score: ' + score + '. Click <a href="sleuth.html">here</a> to play again.');
@@ -281,7 +281,7 @@ function processinput() {
 	if (commands[0] == "QUESTION") { 
 		tempmessage = "";
 		for (var i=0; i<8; i++) {
-			if (character[i][0].toUpperCase()==commands[1]) { tempmessage = character[i][5]; }
+			if (character[i][0].toUpperCase()==commands[1] && character[i][2] === currentroom) { tempmessage = character[i][5]; }
 		}
 		if (tempmessage == "") { tempmessage = "Sorry, that person isn't here."; }
 	}

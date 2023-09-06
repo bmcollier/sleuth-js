@@ -10,8 +10,23 @@
 	  	<script src="components.js"></script>
 	  	<script src="game.js"></script>
 	  	<link rel="stylesheet" href="sleuth.css">
-	  	<script>	
-	    	window.addEventListener('load', Game.start);
+	  	<script>
+			const queryString = window.location.search;
+			const urlParams = new URLSearchParams(queryString);
+			var customCharacters = [
+				[urlParams.get('1_1'), urlParams.get('1_2')],
+				[urlParams.get('2_1'), urlParams.get('2_2')],
+				[urlParams.get('3_1'), urlParams.get('3_2')],
+				[urlParams.get('4_1'), urlParams.get('4_2')],
+				[urlParams.get('5_1'), urlParams.get('5_2')],
+				[urlParams.get('6_1'), urlParams.get('6_2')],
+				[urlParams.get('7_1'), urlParams.get('7_2')],
+				[urlParams.get('8_1'), urlParams.get('8_2')],
+			]
+			function startGame() {
+				Game.start(customCharacters)
+			}
+			window.addEventListener('load', startGame);
 	  	</script>
 	</head>
 	<body>
@@ -28,36 +43,5 @@
 				>&nbsp;_
 			</div>
 		</div>
-		 <div id="fb-root"></div>
-		 	<!-- Start of StatCounter Code for Default Guide -->
-<script type="text/javascript">
-var sc_project=9141097; 
-var sc_invisible=1; 
-var sc_security="50f62956"; 
-var scJsHost = (("https:" == document.location.protocol) ?
-"https://secure." : "http://www.");
-document.write("<sc"+"ript type='text/javascript' src='" +
-scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript><div class="statcounter"><a title="web analytics"
-href="https://statcounter.com/" target="_blank"><img
-class="statcounter"
-src="https://c.statcounter.com/9141097/0/50f62956/1/"
-alt="web analytics"></a></div></noscript>
-<!-- End of StatCounter Code for Default Guide -->
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-3467564-20']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
 	</body>
 </html>

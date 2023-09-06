@@ -1,4 +1,3 @@
-
 function sendMessage(message){
     var xmlhttp;
 	if (window.XMLHttpRequest)
